@@ -159,11 +159,15 @@ section {
     align-items: baseline;
 }
 
+.display {
+  padding: 1.25rem;
+}
+
 .result {
     background: hsl(224, 36%, 15%);
     border-radius: 10px;
     margin: 1rem 0;
-    padding: 1rem;
+    height: 5rem;
     text-align: right;
     color: white;
 }
