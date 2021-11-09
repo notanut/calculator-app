@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/notanut/calculator-app.git](https://github.com/notanut/calculator-app.git)
-- Live Site URL: [https://calculator-app-ten-pink.vercel.app/](https://calculator-app-ten-pink.vercel.app/)
+- Live Site URL: [https://calculator-app-notanut.vercel.app/](https://calculator-app-notanut.vercel.app/)
 
 ## My process
 
