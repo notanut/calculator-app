@@ -1,3 +1,16 @@
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    $("body").removeClass()
+    $("body").toggleClass("third-theme")
+}
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    $("body").removeClass()
+    $("body").toggleClass("first-theme")
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addListener(e => e.matches ? "dark" : "light")
+
+
 $(".first").on("click", () => {
     $("body").removeClass()
     $("body").toggleClass("first-theme")
