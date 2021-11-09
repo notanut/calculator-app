@@ -434,8 +434,8 @@ span, #del, #reset {
 
 @media (max-width: 390px) {
   #keys {
-    grid-template-columns: repeat(4, 3.75rem);
-    grid-template-rows: repeat(5, 3.75rem);
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: repeat(5, 4rem);
     gap: 13px;
   }
 
@@ -446,6 +446,7 @@ span, #del, #reset {
     grid-template-columns: repeat(4, 2.75rem);
     grid-template-rows: repeat(5, 2.75rem);
   }
+
   #keys > * {
     padding: 0.225rem 0;
   }
