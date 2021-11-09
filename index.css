@@ -223,6 +223,10 @@ section {
     color: white;
 }
 
+.title h1 {
+  font-size: 2rem;
+}
+
 span, #del, #reset {
     text-transform: uppercase;
 }
