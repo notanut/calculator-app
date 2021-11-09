@@ -23,7 +23,7 @@ $(document).ready(() => {
     $('.key').on('click',
     function(evt) {
         var buttonPressed = $(this).html()
-        
+
         if (buttonPressed === "reset") {
             result = 0
             currentEnt = '0'
@@ -44,11 +44,12 @@ $(document).ready(() => {
         } else if (buttonPressed === '=') {
             currentEnt = operate(prevEnt, currentEnt, operation)
             operation = null
-        }
+        } 
 
         updateScreen(currentEnt)
     })
 })
+
 
 updateScreen = function(dispValue) {
     var dispValue = dispValue.toString()
@@ -72,3 +73,4 @@ operate = function(x, y, operator) {
     if(operator === 'x') return x * y
     if(operator === '/') return x / y
 }
+
