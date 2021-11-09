@@ -1,0 +1,454 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 2rem;
+  transition: 0.5s background ease;
+}
+
+/* THEME 1 */
+
+.first-theme {
+    background-color: hsl(222, 26%, 31%);
+    color: hsl(221, 14%, 31%);
+}
+
+.toggle-theme {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.toggle {
+  background-color: hsl(223, 31%, 20%);
+  width: 70px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.circle {
+  background-color: hsl(6, 63%, 50%);
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: 0.5 all ease;
+}
+
+.switcher > span,
+.toggle  p {
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0;
+  padding-left: 7.5px;
+  text-align: center;
+}
+
+.toggle-theme > span {
+  font-size: 12px;
+  letter-spacing: 2.7px;
+}
+
+.toggle  p {
+  padding: 6px 4.75px;
+  color: hsl(223, 31%, 20%);
+}
+
+.toggle-number {
+  padding-left: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+
+section {
+    margin: 5rem auto;
+    width: min(90%, 32rem);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.result {
+    background: hsl(224, 36%, 15%);
+    border-radius: 7.5px;
+    margin: 1rem 0;
+    padding: 1rem;
+    text-align: right;
+    color: white;
+}
+
+#keys {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: repeat(5, 3rem);
+    justify-content: center;
+    text-align: center;
+    background: hsl(223, 31%, 20%);
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+    border-radius: 7.5px;
+}
+
+#keys > * {
+  padding: 0.25rem 0;
+  justify-content: center;
+  max-width: 100%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 7.5px;
+  align-items: center;
+}
+
+#del, #reset {
+  background: hsl(225, 21%, 49%);
+  font-size: 21px;
+  -webkit-box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+  -moz-box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+  box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+}
+
+#reset {
+  letter-spacing: -1px;
+}
+
+#equal {
+    background: hsl(6, 63%, 50%);
+    -webkit-box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%);
+    -moz-box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%);
+    box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%);
+}
+
+#reset, #equal {
+    grid-column: 2 span;
+}
+
+.title, span, #del, #reset, #equal {
+    color: white;
+}
+
+span, #del, #reset {
+    text-transform: uppercase;
+}
+
+.number, #add, #subtract, #point, #multiply, #divide {
+    background: hsl(30, 25%, 89%);
+    -webkit-box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
+    -moz-box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
+    box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
+}
+
+#del, #reset, #equal {
+  padding: 0.66rem 0;
+}
+
+#equal {
+  padding: 0;
+}
+
+.attribution {
+  color: white;
+}
+
+.attribution a {
+  color: white;
+}
+
+@media (min-width: 535px) {
+  #keys {
+    grid-template-columns: repeat(4, 6.25rem);
+  }
+}
+
+/* SECOND THEME */
+
+.second-theme .circle {
+  transform: translateX(22.5px);
+}
+
+.second-theme {
+  background: hsl(0, 0%, 90%);
+  color: hsl(60, 10%, 19%);
+}
+
+.second-theme .toggle,
+.second-theme #keys {
+  background: hsl(0, 5%, 81%);
+}
+
+.second-theme .toggle p{
+  color: hsl(0, 5%, 81%);
+}
+
+.second-theme .result {
+  background: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+}
+
+.second-theme #del, 
+.second-theme #reset {
+  background: hsl(185, 42%, 37%);
+  font-size: 21px;
+  -webkit-box-shadow: 0px 3px 0px 0px hsl(185, 58%, 25%);
+  -moz-box-shadow: 0px 3px 0px 0px hsl(185, 58%, 25%);
+  box-shadow: 0px 3px 0px 0px hsl(185, 58%, 25%);
+}
+
+#reset {
+  letter-spacing: -1px;
+}
+
+.second-theme #equal {
+    background: hsl(25, 98%, 40%);
+    -webkit-box-shadow: 0px 3px 0px 0px hsl(25, 99%, 27%);
+    -moz-box-shadow: 0px 3px 0px 0px hsl(25, 99%, 27%);
+    box-shadow: 0px 3px 0px 0px hsl(25, 99%, 27%);
+}
+
+.second-theme .title,
+.second-theme span,
+.second-theme #del,
+.second-theme #reset,
+.second-theme #equal {
+    color: hsl(60, 10%, 19%);
+}
+
+.second-theme #del,
+.second-theme #equal,
+.second-theme #reset {
+  color: white;
+}
+
+.second-theme .number,
+.second-theme #add,
+.second-theme #subtract,
+.second-theme #point,
+.second-theme #multiply,
+.second-theme #divide {
+    background: hsl(45, 7%, 89%);
+    -webkit-box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+    -moz-box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+    box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+}
+
+.second-theme .attribution,
+.second-theme .attribution a{
+  color: hsl(60, 10%, 19%);
+}
+
+
+
+/* THIRD THEME */
+
+.third-theme .circle {
+  background: hsl(176, 100%, 44%);
+  transform: translateX(46px);
+}
+
+.third-theme {
+  background: hsl(268, 75%, 9%);
+  color: hsl(52, 100%, 62%);
+}
+
+.third-theme .toggle,
+.third-theme #keys,
+.third-theme .result {
+  background:  hsl(268, 71%, 12%);
+}
+
+.third-theme .toggle p{
+  color:  hsl(268, 71%, 12%);
+}
+
+.third-theme .result {
+  color: hsl(52, 100%, 62%);
+}
+
+.third-theme #del, 
+.third-theme #reset {
+  background: hsl(281, 89%, 26%);
+  font-size: 21px;
+  -webkit-box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+  -moz-box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+  box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+}
+
+.third-theme #equal {
+    background: hsl(176, 100%, 44%);
+    -webkit-box-shadow: 0px 3px 0px 0px hsl(177, 92%, 70%);
+    -moz-box-shadow: 0px 3px 0px 0px hsl(177, 92%, 70%);
+    box-shadow: 0px 3px 0px 0px hsl(177, 92%, 70%);
+}
+
+.third-theme .title,
+.third-theme span,
+.third-theme #del,
+.third-theme #reset,
+.third-theme #equal {
+  color: hsl(52, 100%, 62%);
+}
+
+.third-theme #del,
+.third-theme #equal,
+.third-theme #reset {
+  color: white;
+}
+
+.third-theme .number,
+.third-theme #add,
+.third-theme #subtract,
+.third-theme #point,
+.third-theme #multiply,
+.third-theme #divide {
+    background: hsl(268, 47%, 21%);
+    -webkit-box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+    -moz-box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+    box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+}
+
+.third-theme #equal {
+  color: hsl(198, 20%, 13%);
+}
+
+.third-theme .attribution,
+.third-theme .attribution a{
+  color: hsl(52, 100%, 62%);
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 28px;
+  }
+
+  section {
+    margin: 2rem auto;
+  }
+
+  #keys {
+    grid-template-columns:  repeat(4, 4.75rem);
+    grid-template-rows: repeat(5, 3.75rem);
+    gap: 13px;
+  }
+  
+  #keys > * {
+    padding: 0.75rem 1.25rem;
+  }
+  
+  #del, #reset, #equal {
+    font-size: 18px;
+    padding: 1.25rem 0;
+  }
+}
+
+@media (max-width: 390px) {
+  #keys {
+    grid-template-columns: repeat(4, 3.75rem);
+    grid-template-rows: repeat(5, 3.75rem);
+    gap: 13px;
+  }
+
+}
+
+@media (max-width: 335px) {
+  #keys {
+    grid-template-columns: repeat(4, 2.75rem);
+    grid-template-rows: repeat(5, 2.75rem);
+  }
+  #keys > * {
+    padding: 0.225rem 0;
+  }
+  
+  #del, #reset, #equal {
+    font-size: 18px;
+    padding: 0.666rem 0;
+  }
+}
